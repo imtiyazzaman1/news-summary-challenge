@@ -6,11 +6,11 @@ describe('ArticleListController', function () {
     document.body.appendChild(node)
 
     var articleController = new ArticleController(new ArticleList())
-    articleController.articleList.add('Headline 1')
-    articleController.articleList.add('Headline 2')
+    articleController.articleList.add('Headline 1', 'body', 'https://url.com')
+    articleController.articleList.add('Headline 2', 'body', 'https://url.com')
     articleController.render()
 
     expect(document.getElementById('app').innerHTML)
-      .toEqual('<ul><li>Headline 1</li><li>Headline 2</li></ul>')
+      .toEqual('<ul><li><a href="https://url.com">Headline 1</a></li><li><a href="https://url.com">Headline 2</a></li></ul>')
   })
 })
