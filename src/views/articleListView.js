@@ -1,5 +1,5 @@
 (function (exports) {
-  function ArticleListView(articleList) {
+  function ArticleListView (articleList) {
     this.articleList = articleList
   }
 
@@ -10,7 +10,7 @@
     })
     view += '</ul>'
     return view
-  };
+  }
 
   exports.ArticleListView = ArticleListView
 })(this)

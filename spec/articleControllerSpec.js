@@ -1,5 +1,5 @@
-describe('ArticleListController', function() {
-  it('renders a view', function() {
+describe('ArticleListController', function () {
+  it('renders a view', function () {
     var node = document.createElement('div')
     node.setAttribute('id', 'app')
 
@@ -9,7 +9,6 @@ describe('ArticleListController', function() {
     articleController.render()
 
     expect(document.getElementById('app').innerHTML)
-      .toEqual('<ul><li>Headline 1</li><li>Headline 2</li></ul>');
-
-  });
-});
+      .toEqual('<ul><li>Headline 1</li><li>Headline 2</li></ul>')
+  })
+})
