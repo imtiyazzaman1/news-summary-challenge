@@ -6,6 +6,7 @@
     this.articleList.add('Headline 2', 'Body 2')
 
     this.articleListView = new ArticleListView(this.articleList)
+    this.articleGetter = new ArticleGetter(this.articleList)
   }
 
   ArticleController.prototype.render = function () {
@@ -17,6 +18,9 @@
 
 (function () {
   var articleController = new ArticleController(new ArticleList())
-  console.log(articleController.articleList)
-  articleController.render()
+  
+  articleController.articleGetter.get()
+    .then(function (res) {
+      articleController.render()
+    })
 })()
