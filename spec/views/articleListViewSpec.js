@@ -11,7 +11,6 @@ describe('ArticleListView', function() {
       articleList.add("Headline 2", 'Body 2')
 
       var articleListView = new ArticleListView(articleList)
-      console.log(articleListView.renderView());
       expect(articleListView.renderView())
         .toEqual('<ul><li>Headline 1</li><li>Headline 2</li></ul>');
     });
