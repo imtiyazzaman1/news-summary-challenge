@@ -14,7 +14,7 @@
       })
       .then(function (res) {
         res.response.results.forEach(function (result) {
-          this.articleList.add(result.webTitle, 1)
+          this.articleList.add(result.webTitle, 'body', result.webUrl)
         }.bind(this))
         return this
       }.bind(this))
