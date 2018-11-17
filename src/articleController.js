@@ -1,6 +1,6 @@
 (function (exports) {
   function ArticleController(articleList) {
-    this.articleList = new ArticleList()
+    this.articleList = articleList
 
     this.articleList.add("Headline 1", 'Body 1')
     this.articleList.add("Headline 2", 'Body 2')

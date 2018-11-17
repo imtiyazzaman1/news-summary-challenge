@@ -5,7 +5,7 @@ describe('ArticleListController', function() {
 
     document.body.appendChild(node)
 
-    var articleController = new ArticleController()
+    var articleController = new ArticleController(new ArticleList())
     articleController.render()
 
     expect(document.getElementById('app').innerHTML)
