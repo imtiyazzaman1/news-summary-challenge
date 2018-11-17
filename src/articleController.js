@@ -2,9 +2,6 @@
   function ArticleController (articleList) {
     this.articleList = articleList
 
-    this.articleList.add('Headline 1', 'Body 1')
-    this.articleList.add('Headline 2', 'Body 2')
-
     this.articleListView = new ArticleListView(this.articleList)
     this.articleGetter = new ArticleGetter(this.articleList)
   }
@@ -14,13 +11,4 @@
   }
 
   exports.ArticleController = ArticleController
-})(this);
-
-(function () {
-  var articleController = new ArticleController(new ArticleList())
-  
-  articleController.articleGetter.get()
-    .then(function (res) {
-      articleController.render()
-    })
-})()
+})(this)
