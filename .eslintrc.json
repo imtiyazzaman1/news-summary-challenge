@@ -13,6 +13,7 @@
     },
 
     "globals": {
+      "Article": false,
       "ArticleList": false,
       "ArticleListView": false,
       "ArticleGetter": false,
