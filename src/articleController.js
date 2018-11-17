@@ -13,4 +13,11 @@
   };
 
   exports.ArticleController = ArticleController
-})(this)
+})(this);
+
+
+(function () {
+  var articleController = new ArticleController(new ArticleList())
+  console.log(articleController.articleList);
+  articleController.render()
+})();
