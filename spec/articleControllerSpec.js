@@ -6,6 +6,8 @@ describe('ArticleListController', function () {
     document.body.appendChild(node)
 
     var articleController = new ArticleController(new ArticleList())
+    articleController.articleList.add('Headline 1')
+    articleController.articleList.add('Headline 2')
     articleController.render()
 
     expect(document.getElementById('app').innerHTML)
