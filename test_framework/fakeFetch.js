@@ -1,6 +1,6 @@
 (function (exports) {
   function fakeFetch (url) {
-    res =
+    var res =
     {
       response:
       {
@@ -8,11 +8,13 @@
         [
           {
             'id': '1',
-            'webTitle': 'this is headline 1'
+            'webTitle': 'this is headline 1',
+            'webUrl': 'https://url.com'
           },
           {
             'id': '2',
-            'webTitle': 'this is headline 2'
+            'webTitle': 'this is headline 2',
+            'webUrl': 'https://url.com'
           }
         ]
       }
