@@ -1,6 +1,19 @@
-describe('ArticeGetter', function() {
-  it('creates a new ArticleGetter', function() {
+describe('ArticeGetter', function () {
+  it('creates a new ArticleGetter', function () {
     var articleGetter = new ArticleGetter()
-    expect(articleGetter).toBeAnInstanceOf(ArticleGetter);
-  });
-});
+    expect(articleGetter).toBeAnInstanceOf(ArticleGetter)
+  })
+
+  describe('#get', function () {
+    it('adds articles to an ArticleList', function () {
+      window.fetch = fakeFetch
+      var articleGetter = new ArticleGetter(new ArticleList())
+
+      articleGetter.get()
+        .then(function (res) {
+          expect(res.articleList.articles[0].getHeadline())
+            .toEqual('this is headline 1')
+        })
+    })
+  })
+})
