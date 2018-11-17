@@ -1,3 +1,22 @@
 {
-    "extends": "standard"
+    "extends": "standard",
+
+    "plugins": [
+      "import",
+      "promise",
+      "node",
+      "standard"
+    ],
+
+    "env": {
+      "jasmine": true
+    },
+
+    "globals": {
+      "ArticleList": false,
+      "ArticleListView": false,
+      "ArticleGetter": false,
+      "fakeFetch": false,
+      "fetch": false
+    }
 }
