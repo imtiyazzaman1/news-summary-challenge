@@ -17,4 +17,11 @@ describe('Article', function () {
       expect(article.getBody()).toEqual('This is the body')
     })
   })
+
+  describe('#getUrl', function () {
+    it('returns the Url of the article', function () {
+      var article = new Article('This is a headline', 'This is the body', 'https://url.com')
+      expect(article.getUrl()).toEqual('https://url.com')
+    })
+  })
 })
