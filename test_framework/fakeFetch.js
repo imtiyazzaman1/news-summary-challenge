@@ -1,5 +1,5 @@
-(function(exports) {
-  function fakeFetch(url) {
+(function (exports) {
+  function fakeFetch (url) {
     res =
     {
       response:
@@ -7,19 +7,19 @@
         results:
         [
           {
-            "id": "1",
-            "webTitle": "this is headline 1"
+            'id': '1',
+            'webTitle': 'this is headline 1'
           },
           {
-            "id": "2",
-            "webTitle": "this is headline 2"
+            'id': '2',
+            'webTitle': 'this is headline 2'
           }
         ]
       }
     }
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       resolve(res)
-    });
+    })
   }
 
   exports.fakeFetch = fakeFetch
