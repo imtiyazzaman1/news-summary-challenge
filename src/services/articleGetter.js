@@ -13,14 +13,9 @@
         }
       })
       .then(function (res) {
-        console.log(res.response.results[0].webTitle);
-        // console.log(this.articleList);
-        // this.articleList.add(res.response.results[0].webTitle)
         res.response.results.forEach(function (result) {
           this.articleList.add(result.webTitle, 1)
-          // console.log(result.webTitle);
         }.bind(this))
-        console.log(this.articleList);
         return this
       }.bind(this))
   }
