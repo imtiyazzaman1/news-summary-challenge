@@ -17,7 +17,7 @@
       "ArticleList": false,
       "ArticleListView": false,
       "ArticleGetter": false,
-      "ArticleController": false,
+      "ArticleListController": false,
       "fakeFetch": false,
       "fetch": false
     }
