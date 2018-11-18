@@ -24,8 +24,8 @@
       }.bind(this))
   }
 
-  ArticleGetter.prototype.getSummary = function (result) {
-    var url = `https://cors-anywhere.herokuapp.com/https://api.aylien.com/api/v1/summarize?url=${result.webUrl}`
+  ArticleGetter.prototype.getSummary = function (article) {
+    var url = `https://cors-anywhere.herokuapp.com/https://api.aylien.com/api/v1/summarize?url=${article.webUrl}`
 
     var request = new Request(url, {
       headers: new Headers({
