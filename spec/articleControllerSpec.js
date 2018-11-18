@@ -32,7 +32,7 @@ describe('ArticleListController', function () {
       var articleListController = new ArticleListController(articleList)
 
       expect(articleListController.showArticleSummary('1'))
-        .toEqual('<p>body 3</p>')
+        .toEqual('<h2>Headline 3</h2><p>body 3</p>')
     })
   })
 })

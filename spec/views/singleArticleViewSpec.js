@@ -10,7 +10,7 @@ describe('SingleArticleView', function () {
       var article = new Article('Headline', '<p>This is the body</p>')
       var view = new SingleArticleView(article)
 
-      expect(view.renderArticle()).toEqual('<p>This is the body</p>')
+      expect(view.renderArticle()).toEqual('<h2>Headline</h2><p>This is the body</p>')
     })
   })
 })

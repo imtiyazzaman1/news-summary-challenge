@@ -8,9 +8,9 @@
   }
 
   SingleArticleView.prototype.renderArticle = function () {
-    return document
-      .getElementById('article')
-      .innerHTML = this.article.getBody()
+    var view = `<h2>${this.article.getHeadline()}</h2>${this.article.getBody()}`
+    document.getElementById('article').innerHTML = view
+    return view
   }
 
   exports.SingleArticleView = SingleArticleView

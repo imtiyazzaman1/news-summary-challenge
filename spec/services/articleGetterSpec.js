@@ -23,12 +23,12 @@ describe('ArticeGetter', function () {
     it('adds a body to the article', function () {
       window.fetch = fakeFetch
       var articleList = new ArticleList()
-      articleList.add("article", 'body', 'url')
+      articleList.add('article', 'body', 'url')
       var articleGetter = new ArticleGetter(articleList)
 
       articleGetter.getSummary(articleList.getArticles()[0])
         .then(function (res) {
-          expect(res.articleList.getArticles()[0].getBody()).toEqual('<p>This</p><p>is</p><p>a</p><p>summary</p>');
+          expect(res.articleList.getArticles()[0].getBody()).toEqual('<p>This</p><p>is</p><p>a</p><p>summary</p>')
         })
     })
   })
