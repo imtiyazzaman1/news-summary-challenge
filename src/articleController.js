@@ -10,5 +10,9 @@
     document.getElementById('app').innerHTML = this.articleListView.renderView()
   }
 
+  ArticleListController.prototype.getArticleFromUrl = function (hash) {
+     return hash.split('/')[1]
+  }
+
   exports.ArticleListController = ArticleListController
 })(this)

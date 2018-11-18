@@ -13,4 +13,14 @@ describe('ArticleListController', function () {
     expect(document.getElementById('app').innerHTML)
       .toEqual('<ul><li><a href="#articles/1">Headline 1</a></li><li><a href="#articles/2">Headline 2</a></li></ul>')
   })
+
+  describe('#getArticleFromUrl', function () {
+    it('returns the id of the article from a url', function () {
+      var hash = '#articles/1'
+      var articleListController = new ArticleListController(new ArticleList())
+
+      expect(articleListController.getArticleFromUrl(hash))
+        .toEqual('1')
+    })
+  })
 })
