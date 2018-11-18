@@ -7,7 +7,8 @@
   }
 
   ArticleListController.prototype.render = function () {
-    document.getElementById('app').innerHTML = this.articleListView.renderView()
+    // console.log(this.articleListView);
+    return document.getElementById('app').innerHTML = this.articleListView.renderView()
   }
 
   exports.ArticleListController = ArticleListController
