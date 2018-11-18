@@ -12,7 +12,7 @@ describe('ArticleListView', function () {
 
       var articleListView = new ArticleListView(articleList)
       expect(articleListView.renderView())
-        .toEqual('<ul><li><a href="#articles/1">Headline 1</a></li><li><a href="#articles/2">Headline 2</a></li></ul>')
+        .toEqual('<ul><img src="undefined"><h3><a href="#articles/1">Headline 1</a></h3><img src="undefined"><h3><a href="#articles/2">Headline 2</a></h3></ul>')
     })
   })
 })

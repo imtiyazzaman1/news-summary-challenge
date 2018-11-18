@@ -6,7 +6,8 @@
   ArticleListView.prototype.renderView = function () {
     var view = '<ul>'
     this.articleList.articles.forEach(function (article) {
-      view += `<li><a href="#articles/${article.getId()}">${article.getHeadline()}</a></li>`
+      view += `<img src="${article.getThumbnail()}">`
+      view += `<h3><a href="#articles/${article.getId()}">${article.getHeadline()}</a></h3>`
     })
     view += '</ul>'
     return view
