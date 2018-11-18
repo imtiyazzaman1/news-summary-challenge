@@ -30,9 +30,8 @@ describe('ArticleListController', function () {
       articleList.add('Headline 3', '<p>body 3</p>')
       articleList.add('Headline 4', '<p>body 4</p>')
       var articleListController = new ArticleListController(articleList)
-
       expect(articleListController.showArticleSummary('1'))
-        .toEqual('<h2>Headline 3</h2><p>body 3</p>')
+        .toEqual('<h2>Headline 3</h2><p>body 3</p><p>Click <a href="undefined">here</a> to read the full article</p>')
     })
   })
 })
