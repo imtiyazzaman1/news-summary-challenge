@@ -18,6 +18,7 @@
       "ArticleListView": false,
       "ArticleGetter": false,
       "ArticleListController": false,
+      "config": false,
       "SingleArticleView": false,
       "fakeFetch": false,
       "fetch": false
