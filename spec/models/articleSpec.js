@@ -31,4 +31,12 @@ describe('Article', function () {
       expect(article.getId()).toEqual('1')
     })
   })
+
+  describe('#setBody', function () {
+    it('sets the body of the article', function () {
+      var article = new Article('this is a headline', 'body')
+      article.setBody('this is a body')
+      expect(article.getBody()).toEqual('this is a body')
+    })
+  })
 })

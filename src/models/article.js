@@ -14,6 +14,10 @@
     return this.body
   }
 
+  Article.prototype.setBody = function (text) {
+    this.body = text
+  };
+
   Article.prototype.getUrl = function () {
     return this.url
   }
