@@ -20,17 +20,26 @@
               this.articleList.add(result.webTitle, body, result.webUrl)
             }.bind(this))
         }.bind(this))
-        console.log(this)
         return this
       }.bind(this))
   }
 
-  ArticleGetter.prototype._extractBody = function (result) {
-    return fetch(`http://news-summary-api.herokuapp.com/aylien?apiRequestUrl=https://api.aylien.com/api/v1/summarize?url=${result.webUrl}`)
+  ArticleGetter.prototype.getSummary = function (result) {
+    var url = `https://cors-anywhere.herokuapp.com/https://api.aylien.com/api/v1/summarize?url=${result.webUrl}`
+
+    var request = new Request(url, {
+      headers: new Headers({
+        'X-AYLIEN-TextAPI-Application-Key': 'dac06e73e1491b7fb4249b45896557d4',
+        'X-AYLIEN-TextAPI-Application-ID': '05e767f7'
+      })
+    })
+
+    return fetch(request)
       .then(function (res) {
         return res.json()
       })
       .then(function (res) {
+        console.log(res);
         return res.sentences
       })
   }

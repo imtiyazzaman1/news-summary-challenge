@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/imtiyazzaman1/news-summary-challenge#readme",
   "dependencies": {
+    "aylien_textapi": "^0.7.0",
     "http-server": "^0.11.1"
   },
   "devDependencies": {
