@@ -1,9 +1,10 @@
 (function (exports) {
-  function Article (headline, body, url, id) {
+  function Article (headline, body, url, id, thumbnail) {
     this.headline = headline
     this.body = body
     this.url = url
     this.id = id
+    this.thumbnail = thumbnail
   }
 
   Article.prototype.getHeadline = function () {
@@ -25,6 +26,10 @@
   Article.prototype.getId = function () {
     return this.id
   }
+
+  Article.prototype.getThumbnail = function () {
+    return this.thumbnail
+  };
 
   exports.Article = Article
 })(this)

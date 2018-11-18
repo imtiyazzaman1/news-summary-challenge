@@ -39,4 +39,11 @@ describe('Article', function () {
       expect(article.getBody()).toEqual('this is a body')
     })
   })
+
+  describe('#getThumbnail', function () {
+    it('returns the address containing the thumbnail', function () {
+      var article = new Article('This is a headline', 'This is the body', 'https://url.com', '1', 'image.url.com')
+      expect(article.getThumbnail()).toEqual('image.url.com')
+    })
+  })
 })
