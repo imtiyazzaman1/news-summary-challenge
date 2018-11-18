@@ -14,10 +14,20 @@
       })
       .then(function (res) {
         res.response.results.forEach(function (result) {
-          this.articleList.add(result.webTitle, 'body', result.webUrl)
+          this.articleList.add(result.webTitle, this._extractBody(result)
+            , result.webUrl)
         }.bind(this))
         return this
       }.bind(this))
+  }
+
+  ArticleGetter.prototype._extractBody = function (result) {
+    var bodyArr = result.fields.body.split('</p>')
+    var arr = []
+
+    for (var i = 0; i < 3; i++) { arr.push(bodyArr[i]) }
+    var str = arr.join('</p>') + '</p>'
+    return str
   }
 
   exports.ArticleGetter = ArticleGetter

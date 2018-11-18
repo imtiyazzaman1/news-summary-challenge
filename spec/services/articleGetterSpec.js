@@ -13,6 +13,8 @@ describe('ArticeGetter', function () {
         .then(function (res) {
           expect(res.articleList.articles[0].getHeadline())
             .toEqual('this is headline 1')
+          expect(res.articleList.articles[0].getBody())
+            .toEqual('<p>P1</p><p>P2</p><p>P3</p>')
           expect(res.articleList.articles[0].getUrl())
             .toEqual('https://url.com')
         })
