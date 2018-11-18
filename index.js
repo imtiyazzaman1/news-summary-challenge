@@ -1,5 +1,5 @@
 var articleListController = new ArticleListController(new ArticleList())
-articleListController.articleGetter.get()
+articleListController.articleGetter.getHeadlines()
   .then(function (res) {
     articleListController.render()
   })
