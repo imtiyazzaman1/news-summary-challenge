@@ -17,7 +17,7 @@
 
   Article.prototype.setBody = function (text) {
     this.body = text
-  };
+  }
 
   Article.prototype.getUrl = function () {
     return this.url
@@ -29,7 +29,7 @@
 
   Article.prototype.getThumbnail = function () {
     return this.thumbnail
-  };
+  }
 
   exports.Article = Article
 })(this)
