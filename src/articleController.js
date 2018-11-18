@@ -28,8 +28,17 @@
     var article = this.articleList.getArticles().find(function (article) {
       return article.getId() == id
     })
-    var view = new SingleArticleView(article)
-    return view.renderArticle()
+
+    if (article.getBody() === 'body') {
+      this.articleGetter.getSummary(article)
+        .then(function () {
+          var view = new SingleArticleView(article)
+          return view.renderArticle()
+        })
+    } else {
+      var view = new SingleArticleView(article)
+      return view.renderArticle()
+    }
   }
 
   exports.ArticleListController = ArticleListController
