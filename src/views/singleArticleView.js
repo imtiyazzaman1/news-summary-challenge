@@ -10,6 +10,7 @@
   SingleArticleView.prototype.renderArticle = function () {
 
     var view = '<ul>'
+    view += '<a href="/">Back</a><br><br>'
     view += thumbnail(this.article)
     view += headline(this.article)
     view += body(this.article)

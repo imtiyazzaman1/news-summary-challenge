@@ -32,7 +32,7 @@ describe('ArticleListController', function () {
       var articleListController = new ArticleListController(articleList)
 
       expect(articleListController.showArticleSummary('1'))
-        .toEqual('<ul><img src="https://vignette.wikia.nocookie.net/starwarslegion/images/d/d9/Test.png/revision/latest?cb=20180224062558"><h2>Headline 3</h2><p>body 3</p><p>Click <a href="url">here</a> to read the full article</p></ul>')
+        .toEqual('<ul><a href="/">Back</a><br><br><img src="https://vignette.wikia.nocookie.net/starwarslegion/images/d/d9/Test.png/revision/latest?cb=20180224062558"><h2>Headline 3</h2><p>body 3</p><p>Click <a href="url">here</a> to read the full article</p></ul>')
     })
   })
 })

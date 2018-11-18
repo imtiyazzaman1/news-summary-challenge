@@ -9,7 +9,7 @@ describe('SingleArticleView', function () {
     it('returns the article in HTML', function () {
       var article = new Article('Headline', '<p>This is the body</p>', 'url', 'id', 'https://vignette.wikia.nocookie.net/starwarslegion/images/d/d9/Test.png/revision/latest?cb=20180224062558')
       var view = new SingleArticleView(article)
-      expect(view.renderArticle()).toEqual('<ul><img src="https://vignette.wikia.nocookie.net/starwarslegion/images/d/d9/Test.png/revision/latest?cb=20180224062558"><h2>Headline</h2><p>This is the body</p><p>Click <a href="url">here</a> to read the full article</p></ul>')
+      expect(view.renderArticle()).toEqual('<ul><a href="/">Back</a><br><br><img src="https://vignette.wikia.nocookie.net/starwarslegion/images/d/d9/Test.png/revision/latest?cb=20180224062558"><h2>Headline</h2><p>This is the body</p><p>Click <a href="url">here</a> to read the full article</p></ul>')
     })
   })
 })
