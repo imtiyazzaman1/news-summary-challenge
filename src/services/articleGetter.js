@@ -4,7 +4,7 @@
   }
 
   ArticleGetter.prototype.get = function () {
-    return fetch('http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/politics??show-fields=all')
+    return fetch('http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/politics?show-fields=all')
       .then(function (res) {
         if (res.headers !== undefined) {
           return res.json()
