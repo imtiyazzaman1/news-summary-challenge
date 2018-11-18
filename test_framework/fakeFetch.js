@@ -25,7 +25,14 @@
             webUrl: 'https://url.com'
           }
         ]
-      }
+      },
+      sentences:
+      [
+        'This',
+        'is',
+        'a',
+        'summary'
+      ]
     }
     return new Promise(function (resolve, reject) {
       resolve(res)
