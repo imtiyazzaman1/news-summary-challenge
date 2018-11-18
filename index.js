@@ -1,5 +1,5 @@
-var articleController = new ArticleController(new ArticleList())
-articleController.articleGetter.get()
+var articleListController = new ArticleListController(new ArticleList())
+articleListController.articleGetter.get()
   .then(function (res) {
-    articleController.render()
+    articleListController.render()
   })
