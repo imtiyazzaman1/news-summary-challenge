@@ -15,6 +15,8 @@ describe('ArticeGetter', function () {
             .toEqual('this is headline 1')
           expect(res.articleList.articles[0].getUrl())
             .toEqual('https://url.com')
+          expect(res.articleList.articles[0].getThumbnail())
+            .toEqual('image.url.com')
         })
     })
   })

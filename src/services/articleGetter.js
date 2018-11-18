@@ -15,7 +15,7 @@
       .then(function (res) {
         res.response.results.forEach(function (result) {
           this.articleList.add(result.webTitle, 'body'
-            , result.webUrl)
+            , result.webUrl, result.fields.thumbnail)
         }.bind(this))
         return this
       }.bind(this))
