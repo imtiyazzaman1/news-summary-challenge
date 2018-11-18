@@ -8,11 +8,19 @@
   }
 
   SingleArticleView.prototype.renderArticle = function () {
-    var view = thumbnail(this.article)
+
+    var view = '<ul>'
+    view += thumbnail(this.article)
     view += headline(this.article)
     view += body(this.article)
     view += linkToArticle(this.article)
+    view += '</ul>'
+
     document.getElementById('article').innerHTML = view
+    if (document.getElementById('test') === null) {
+      var e = document.getElementById('app')
+      e.parentNode.removeChild(e)
+    }
     return view
   }
 
