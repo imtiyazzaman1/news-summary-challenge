@@ -27,12 +27,12 @@ describe('ArticleListController', function () {
   describe('#showArticleSummary', function () {
     it('renders the article summary', function () {
       var articleList = new ArticleList()
-      articleList.add('Headline 3', "<p>body 3</p>")
-      articleList.add('Headline 4', "<p>body 4</p>")
+      articleList.add('Headline 3', '<p>body 3</p>')
+      articleList.add('Headline 4', '<p>body 4</p>')
       var articleListController = new ArticleListController(articleList)
 
       expect(articleListController.showArticleSummary('1'))
-        .toEqual('<p>body 3</p>');
+        .toEqual('<p>body 3</p>')
     })
   })
 })

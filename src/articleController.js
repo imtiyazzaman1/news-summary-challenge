@@ -10,6 +10,16 @@
     document.getElementById('app').innerHTML = this.articleListView.renderView()
   }
 
+  ArticleListController.prototype.changeArticleForCurrentPage = function () {
+    window.addEventListener('hashchange', () => {
+      this.showArticleForCurrentPage()
+    })
+  }
+
+  ArticleListController.prototype.showArticleForCurrentPage = function () {
+    this.showArticleSummary(this.getArticleFromUrl(window.location.hash))
+  }
+
   ArticleListController.prototype.getArticleFromUrl = function (hash) {
     return hash.split('/')[1]
   }
@@ -20,7 +30,7 @@
     })
     var view = new SingleArticleView(article)
     return view.renderArticle()
-  };
+  }
 
   exports.ArticleListController = ArticleListController
 })(this)
