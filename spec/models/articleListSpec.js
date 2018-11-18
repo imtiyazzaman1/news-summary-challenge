@@ -17,12 +17,13 @@ describe('ArticleList', function () {
   describe('#add', function () {
     it('adds an article to the articleList', function () {
       var articleList = new ArticleList()
-      articleList.add('Headline', 'Body', 'https://url.com')
+      articleList.add('Headline', 'Body', 'https://url.com', 'image.url.com')
 
       expect(articleList.getArticles()[0].getHeadline()).toEqual('Headline')
       expect(articleList.getArticles()[0].getBody()).toEqual('Body')
       expect(articleList.getArticles()[0].getUrl()).toEqual('https://url.com')
       expect(articleList.getArticles()[0].getId()).toEqual(1)
+      expect(articleList.getArticles()[0].getThumbnail()).toEqual('image.url.com')
     })
   })
 })

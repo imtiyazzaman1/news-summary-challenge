@@ -8,8 +8,8 @@
     return this.articles
   }
 
-  ArticleList.prototype.add = function (headline, body, url) {
-    var article = new Article(headline, body, url, this._uniqueId())
+  ArticleList.prototype.add = function (headline, body, url, thumbnail) {
+    var article = new Article(headline, body, url, this._uniqueId(), thumbnail)
     this.articles.push(article)
   }
 
