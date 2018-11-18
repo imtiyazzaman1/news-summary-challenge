@@ -27,11 +27,13 @@ describe('ArticleListController', function () {
   describe('#showArticleSummary', function () {
     it('renders the article summary', function () {
       var articleList = new ArticleList()
-      articleList.add('Headline 3', '<p>body 3</p>')
+      articleList.add('Headline 3', '<p>body 3</p>', 'url', 'https://vignette.wikia.nocookie.net/starwarslegion/images/d/d9/Test.png/revision/latest?cb=20180224062558')
       articleList.add('Headline 4', '<p>body 4</p>')
       var articleListController = new ArticleListController(articleList)
+
       expect(articleListController.showArticleSummary('1'))
-        .toEqual('<h2>Headline 3</h2><p>body 3</p><p>Click <a href="undefined">here</a> to read the full article</p>')
+        .toEqual('<img src="https://vignette.wikia.nocookie.net/starwarslegion/images/d/d9/Test.png/revision/latest?cb=20180224062558"><h2>Headline 3</h2><p>body 3</p><p>Click <a href="url">here</a> to read the full article</p>')
     })
   })
 })
+// var article = new Article('Headline', '<p>This is the body</p>', 'url', 'id', 'https://vignette.wikia.nocookie.net/starwarslegion/images/d/d9/Test.png/revision/latest?cb=20180224062558')
