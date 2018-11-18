@@ -6,7 +6,7 @@
   ArticleGetter.prototype.getHeadlines = function () {
     return fetch('http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/politics?show-fields=all')
       .then(function (res) {
-        if (res.headers !== undefined) {
+        if (notTestData(res)) {
           return res.json()
         } else {
           return res
@@ -22,18 +22,15 @@
   }
 
   ArticleGetter.prototype.getSummary = function (article) {
-    var url = `https://cors-anywhere.herokuapp.com/https://api.aylien.com/api/v1/summarize?url=${article.getUrl()}`
-
-    var request = new Request(url, {
+    var request = new Request(url(article), {
       headers: new Headers({
         'X-AYLIEN-TextAPI-Application-Key': config.apiKey,
         'X-AYLIEN-TextAPI-Application-ID': config.apiID
       })
     })
-
     return fetch(request)
       .then(function (res) {
-        if (res.headers !== undefined) {
+        if (notTestData(res)) {
           return res.json()
         } else {
           return res
@@ -48,5 +45,12 @@
       }.bind(this))
   }
 
+  function notTestData (res) {
+    if (res.headers !== undefined) return true
+  }
+
+  function url (article) {
+    return `https://cors-anywhere.herokuapp.com/https://api.aylien.com/api/v1/summarize?url=${article.getUrl()}`
+  }
   exports.ArticleGetter = ArticleGetter
 })(this)

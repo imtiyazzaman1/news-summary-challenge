@@ -32,13 +32,16 @@
     if (article.getBody() === 'body') {
       this.articleGetter.getSummary(article)
         .then(function () {
-          var view = new SingleArticleView(article)
-          return view.renderArticle()
+          return renderView(article)
         })
     } else {
-      var view = new SingleArticleView(article)
-      return view.renderArticle()
+      return renderView(article)
     }
+  }
+
+  function renderView (article) {
+    var view = new SingleArticleView(article)
+    return view.renderArticle()
   }
 
   exports.ArticleListController = ArticleListController
