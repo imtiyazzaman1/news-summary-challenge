@@ -3,8 +3,10 @@
     this.articleList = articleList
   }
 
-  ArticleGetter.prototype.getHeadlines = function () {
-    return fetch('http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/politics?show-fields=all')
+  ArticleGetter.prototype.getHeadlines = function (category) {
+    var url = `http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/${category}?show-fields=all`
+
+    return fetch(url)
       .then(function (res) {
         if (notTestData(res)) {
           return res.json()

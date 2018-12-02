@@ -1,6 +1,16 @@
 var articleListController = new ArticleListController(new ArticleList())
-articleListController.articleGetter.getHeadlines()
-  .then(function (res) {
-    articleListController.render()
-    articleListController.changeArticleForCurrentPage()
-  })
+renderPage('uk-news')
+
+var categoryDropdown = document.getElementById('categories')
+categoryDropdown.addEventListener('change', function () {
+  articleListController.articleList.clear()
+  renderPage(categoryDropdown.value)
+})
+
+function renderPage(category) {
+  articleListController.articleGetter.getHeadlines(category)
+    .then(function (res) {
+      articleListController.render()
+      articleListController.changeArticleForCurrentPage()
+    })
+}

@@ -18,5 +18,9 @@
     return this.articleId
   }
 
+  ArticleList.prototype.clear = function () {
+    this.articles = []
+  };
+
   exports.ArticleList = ArticleList
 })(this)

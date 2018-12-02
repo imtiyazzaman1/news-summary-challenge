@@ -26,4 +26,14 @@ describe('ArticleList', function () {
       expect(articleList.getArticles()[0].getThumbnail()).toEqual('image.url.com')
     })
   })
+
+  describe('#clear', function() {
+    it('clears the articles', function() {
+      var articleList = new ArticleList()
+      articleList.add('Headline', 'Body', 'https://url.com', 'image.url.com')
+      articleList.clear()
+
+      expect(articleList.getArticles().length).toEqual(0)
+    });
+  });
 })
