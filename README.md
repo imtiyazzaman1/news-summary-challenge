@@ -1,5 +1,35 @@
 # News Summary challenge
 
+## About the Program
+The program uses the Guardian API to display the headlines on the page. When a link is clicked, the Aylien text summarise API is used to summarise the text in the article and display it on the screen. The app functions as a single page app with the page dynamically updating upon user interaction.
+
+The program was built using vanilla JavaScript and follows an MVC architecture.
+
+This application was tested using my own testing framework which can be found in the folder `test-framework`. The test files can be in the `spec` folder
+
+## Installation
+1. Clone this repo
+2. `cd` into the directory
+3. `npm start`
+4. Visit `http://localhost:8080/` in your web browser
+
+## Running Test
+1. Clone this repo
+2. `cd` into the directory
+3. `npm test`
+
+## Example Usage
+The homepage shows the current headlines from the Guardian
+![Headlines](images/headlines.png)
+
+Change categories usign the dropdown menu
+![Business](images/busniess.png)
+
+Click on a headline shows you a summary of the article with a link to the full article at the bottom
+![Summary](images/summary.png)
+
+# News Summary challenge
+
 * Challenge time: rest of the day and weekend, until Monday 9am.
 * Feel free to use Google, your notes, books, etc. but work on your own.
 * If you refer to the solution of another coach or student, please put a link to that in your README.
